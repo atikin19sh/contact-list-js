@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <script src="./script/main.js" defer></script>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+  
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class = "wrapper__main-text">Contact List on JS</h1>
+        <a href="https://github.com/Dubsta-Bubsta/contactList" class="repository-link" target="_blank">GitHub Repository link</a>
+        
+        <div class="inputs">
+            <input type="text" class="inputs__item inputs__name js-name-input" placeholder="Name">
+            <input type="text" class="inputs__item inputs__vacancy js-vacancy-input" placeholder="Vacancy">
+            <input type="text" class="inputs__item inputs__phone js-phone-input" placeholder="Phone +X XXX XXX XX XX">
+            <input type="submit" class = "inputs__item inputs__submit js-submit-btn" value = "ADD">
+            <input type="submit" class = "inputs__item inputs__clear js-clear-btn" value = "Clear List">
+            <input type="submit" class = "inputs__item inputs__search js-search-btn" value = "Search">
+        </div>
+
+       
+        <div class="error-holder">
+            <div class="error js-error">ERROR</div>
+        </div>
+
+        <div class="contact-table">            
+            <div class="contact-table__column column">
+                    <div class = "column__element element"><div data-id = 'a' class="element__letter js-column-letter">A</div></div>
+                    <div class = "column__element element"><div data-id = 'b' class="element__letter js-column-letter">B</div></div>
+                    <div class = "column__element element"><div data-id = 'c' class="element__letter js-column-letter">C</div></div>
+                    <div class = "column__element element"><div data-id = 'd' class="element__letter js-column-letter">D</div></div>
+                    <div class = "column__element element"><div data-id = 'e' class="element__letter js-column-letter">E</div></div>
+                    <div class = "column__element element"><div data-id = 'f' class="element__letter js-column-letter">F</div></div>
+                    <div class = "column__element element"><div data-id = 'g' class="element__letter js-column-letter">G</div></div>
+                    <div class = "column__element element"><div data-id = 'h' class="element__letter js-column-letter">H</div></div>
+                    <div class = "column__element element"><div data-id = 'i' class="element__letter js-column-letter">I</div></div>
+                    <div class = "column__element element"><div data-id = 'j' class="element__letter js-column-letter">J</div></div>
+                    <div class = "column__element element"><div data-id = 'k' class="element__letter js-column-letter">K</div></div>
+                    <div class = "column__element element"><div data-id = 'l' class="element__letter js-column-letter">L</div></div>
+                    <div class = "column__element element"><div data-id = 'm' class="element__letter js-column-letter">M</div></div>
+            </div>
+            <div class="contact-table__column column">
+                    <div class = "column__element element"><div data-id = 'n' class="element__letter js-column-letter">N</div></div>
+                    <div class = "column__element element"><div data-id = 'o' class="element__letter js-column-letter">O</div></div>
+                    <div class = "column__element element"><div data-id = 'p' class="element__letter js-column-letter">P</div></div>
+                    <div class = "column__element element"><div data-id = 'q' class="element__letter js-column-letter">Q</div></div>
+                    <div class = "column__element element"><div data-id = 'r' class="element__letter js-column-letter">R</div></div>
+                    <div class = "column__element element"><div data-id = 's' class="element__letter js-column-letter">S</div></div>
+                    <div class = "column__element element"><div data-id = 't' class="element__letter js-column-letter">T</div></div>
+                    <div class = "column__element element"><div data-id = 'u' class="element__letter js-column-letter">U</div></div>
+                    <div class = "column__element element"><div data-id = 'v' class="element__letter js-column-letter">V</div></div>
+                    <div class = "column__element element"><div data-id = 'w' class="element__letter js-column-letter">W</div></div>
+                    <div class = "column__element element"><div data-id = 'x' class="element__letter js-column-letter">X</div></div>
+                    <div class = "column__element element"><div data-id = 'y' class="element__letter js-column-letter">Y</div></div>
+                    <div class = "column__element element"><div data-id = 'z' class="element__letter js-column-letter">Z</div></div>                    
+            </div>
+        </div>        
+        <div id = "z1"></div>
+
+
+
+        <div class="search-popup popup">
+            <div class="search-popup__item search-popup__text js-search-popup">                
+                <h1 class = "">Search contact</h1>
+                <input type="text" placeholder="Search..." class = "search-popup__input js-search-input">
+                <div class="search-popup__output js-popup-output"></div>
+                <input type="submit" class = "search-popup__show-all js-show-all-btn" value = "Show all">
+                <i class="fa fa-window-close search-popup__close js-popup-close" aria-hidden="true"></i>
+            </div>
+            <div class="search-popup__item search-popup__bg js-search-popup-bg"></div>
+        </div>
+        
+
+        <div class="edit-popup">
+            <div class="edit-popup__item edit-popup__text js-edit-popup">                
+                <h1 class = "">Edit</h1>
+                <div class="edit-popup__inputs">
+                    <input type="text" class="edit-popup__inputs__item edit-popup__inputs__name js-edit-name-input" placeholder="Name">
+                    <input type="text" class="edit-popup__inputs__item  edit-popup__inputs__vacancy js-edit-vacancy-input" placeholder="Vacancy">
+                    <input type="text" class="edit-popup__inputs__item  edit-popup__inputs__phone js-edit-phone-input" placeholder="Phone +X XXX XXX XX XX">
+                    <input type="submit" class = "edit-popup__inputs__item edit-popup__inputs__submit  js-submit-edit-btn" value = "Edit">                   
+                </div>                      
+                
+                <i class="fa fa-window-close edit-popup__close js-edit-popup-close" aria-hidden="true"></i>
+            </div>
+            <div class="edit-popup__item edit-popup__bg js-edit-popup-bg"></div>
+        </div>
+    </div>   
+
+</body>
+
+</html>
